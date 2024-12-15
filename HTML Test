@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #0078D7;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Willkommen auf meiner Website</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">Über mich</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
+    <main>
+        <h2>Home</h2>
+        <p>Hier ist ein kleiner Text über meine Website.</p>
+        <h2 id="about">Über mich</h2>
+        <p>Ich bin [Ihr Name] und dies ist meine erste Website.</p>
+        <h2 id="contact">Kontakt</h2>
+        <p>Schreiben Sie mir an: <a href="mailto:meine-email@example.com">meine-email@example.com</a></p>
+    </main>
+    <footer>
+        <p>&copy; 2024 Meine Website</p>
+    </footer>
+</body>
+</html>
