@@ -168,8 +168,7 @@ function buildCardio() {
   group.userData.ring = ring;
   group.add(ring);
 
-  const grid = createDataGrid(0xffc6d6);
-  group.add(grid);
+  group.add(createDataGrid(0xffc6d6));
   const scan = createScanPlane(0xffd6e0);
   group.userData.scan = scan;
   group.add(scan);
@@ -210,8 +209,7 @@ function buildNeuro() {
   group.add(haloMesh);
 
   group.add(createNeuroCluster(palette.neuro.wire));
-  const grid = createDataGrid(0x8fd3ff);
-  group.add(grid);
+  group.add(createDataGrid(0x8fd3ff));
   const scan = createScanPlane(0x9db4ff);
   group.userData.scan = scan;
   group.add(scan);
@@ -264,8 +262,7 @@ function buildInformatics() {
   ring.rotation.x = Math.PI / 2.5;
   group.add(ring);
 
-  const grid = createDataGrid(0x7fd6a7);
-  group.add(grid);
+  group.add(createDataGrid(0x7fd6a7));
   const scan = createScanPlane(0x7fd6a7);
   group.userData.scan = scan;
   group.add(scan);

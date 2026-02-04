@@ -1,16 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="Kontakt zu Joshua Forster — Anfragen zu Projekten, Forschung oder CV.">
-    <title>Kontakt - Joshua Forster</title>
+    <title>Kontakt — Joshua Forster</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="shortcut icon" href="favicon.ico">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#0b1116">
     <meta property="og:title" content="Kontakt — Joshua Forster">
     <meta property="og:description" content="Kontaktanfrage zu Projekten, Forschung oder CV.">
     <meta property="og:type" content="website">
@@ -22,90 +22,88 @@
     <meta name="twitter:image" content="https://joshuaforster.de/og-image.png">
     <link rel="canonical" href="https://joshuaforster.de/contact.html">
     <link rel="stylesheet" href="style.css?v=20260204">
-</head>
-<body>
-        <a class="skip-link" href="#main-content">Weiter zu Inhalt</a>
-        <header>
-            <div class="site-max header-wrapper">
-                <div class="brand"><a href="index.html">Joshua Forster</a></div>
-                <nav aria-label="Hauptnavigation">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">Über mich</a></li>
-                        <li><a href="projects.html">Projekte</a></li>
-                        <li><a href="research.html">Forschung</a></li>
-                        <li><a href="contact.html" aria-current="page">Kontakt</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Weiter zu Inhalt</a>
+    <header class="site-header">
+      <div class="site-max header-wrapper">
+        <div class="brand"><a href="index.html">Joshua Forster</a></div>
+        <nav aria-label="Hauptnavigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Über mich</a></li>
+            <li><a href="projects.html">Projekte</a></li>
+            <li><a href="research.html">Forschung</a></li>
+            <li><a href="contact.html" aria-current="page">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-        <main class="site-max" id="main-content">
-            <section class="section">
-                <div class="section-head">
-                    <h1>Kontakt</h1>
-                    <p class="section-lead">Für Anfragen zu Projekten, Forschung oder Bewerbungen schreibe mir gern. Eine kurze Nachricht mit Kontext und Wunschzeitpunkt reicht.</p>
-                </div>
-                <div class="info-grid">
-                    <div class="info-card">
-                        <h4>Antwortzeit</h4>
-                        <p>In der Regel innerhalb von 48 Stunden.</p>
-                    </div>
-                    <div class="info-card">
-                        <h4>CV‑Anfrage</h4>
-                        <p>Ich sende den CV nach kurzer Bestätigung per E‑Mail zu.</p>
-                    </div>
-                    <div class="info-card">
-                        <h4>Kooperationen</h4>
-                        <p>Gern mit kurzer Zielbeschreibung und gewünschtem Zeitrahmen.</p>
-                    </div>
-                </div>
+    <main class="site-max" id="main-content">
+      <section class="section">
+        <div class="section-head">
+          <h1>Kontakt</h1>
+          <p class="section-lead">Für Anfragen zu Projekten, Forschung oder Bewerbungen schreibe mir gern. Eine kurze Nachricht mit Kontext und Wunschzeitpunkt reicht.</p>
+        </div>
+        <div class="info-grid">
+          <div class="info-card">
+            <h4>Antwortzeit</h4>
+            <p>In der Regel innerhalb von 48 Stunden.</p>
+          </div>
+          <div class="info-card">
+            <h4>CV‑Anfrage</h4>
+            <p>Ich sende den CV nach kurzer Bestätigung per E‑Mail zu.</p>
+          </div>
+          <div class="info-card">
+            <h4>Kooperationen</h4>
+            <p>Gern mit kurzer Zielbeschreibung und gewünschtem Zeitrahmen.</p>
+          </div>
+        </div>
 
-                        <!-- Formspree endpoint configured -->
-                        <form id="contact-form" action="https://formspree.io/f/xqeajnve" method="POST">
-                            <input type="hidden" name="_subject" value="Website-Anfrage von Eigene-Website">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" autocomplete="name" required>
+        <form id="contact-form" action="https://formspree.io/f/xqeajnve" method="POST">
+          <input type="hidden" name="_subject" value="Website-Anfrage von Mywebsite">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
 
-                    <label for="email">E-Mail</label>
-                    <input type="email" id="email" name="email" autocomplete="email" required>
+          <label for="email">E-Mail</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
 
-                    <label for="subject">Betreff</label>
-                    <input type="text" id="subject" name="subject" autocomplete="off">
+          <label for="subject">Betreff</label>
+          <input type="text" id="subject" name="subject" autocomplete="off">
 
-                    <label for="message">Nachricht</label>
-                    <textarea id="message" name="message" rows="6" required></textarea>
+          <label for="message">Nachricht</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
 
-                                <label style="display:flex;align-items:center;gap:0.5rem"><input type="checkbox" id="request_cv" name="request_cv" value="yes"> Ich möchte den CV per E-Mail erhalten</label>
+          <label class="checkbox-row"><input type="checkbox" id="request_cv" name="request_cv" value="yes"> Ich möchte den CV per E‑Mail erhalten</label>
 
-                                <button class="btn btn-primary" type="submit">Nachricht senden</button>
-                <p style="margin-top:0.6rem;color:var(--muted);font-size:0.9rem">Mit Absenden willige ich ein, dass meine Daten zur Bearbeitung dieser Anfrage gespeichert und verarbeitet werden. Weitere Informationen in <a href="datenschutz.html">Datenschutz</a>.</p>
-                </form>
+          <button class="btn btn-primary" type="submit">Nachricht senden</button>
+          <p class="muted small">Mit Absenden willige ich ein, dass meine Daten zur Bearbeitung dieser Anfrage gespeichert und verarbeitet werden. Weitere Informationen in <a href="datenschutz.html">Datenschutz</a>.</p>
+        </form>
 
-                <p style="margin-top:1rem;color:var(--muted)">Alternativ: <a href="mailto:joshuaforster02@gmail.com">joshuaforster02@gmail.com</a></p>
-            </section>
-        </main>
+        <p class="muted">Alternativ: <a href="mailto:joshuaforster02@gmail.com">joshuaforster02@gmail.com</a></p>
+      </section>
+    </main>
 
-        <footer class="site-max">
-            <p>&copy; 2026 Joshua Forster — <a href="mailto:joshuaforster02@gmail.com">joshuaforster02@gmail.com</a> — <a href="datenschutz.html">Datenschutz</a></p>
-        </footer>
-            <script>
-                // Smooth-scroll to form when coming from CV-on-request links
-                (function(){
-                    if(!('querySelector' in document)) return;
-                    function focusForm(){
-                        var form = document.getElementById('contact-form');
-                        if(!form) return;
-                        form.scrollIntoView({behavior:'smooth',block:'center'});
-                        var first = form.querySelector('input,textarea,button');
-                        if(first) first.focus({preventScroll:true});
-                    }
-                    if(location.hash === '#contact-form'){
-                        // small timeout to allow layout to settle
-                        setTimeout(focusForm,80);
-                    }
-                })();
-            </script>
+    <footer class="site-max site-footer">
+      <p>&copy; 2026 Joshua Forster — <a href="mailto:joshuaforster02@gmail.com">joshuaforster02@gmail.com</a> — <a href="datenschutz.html">Datenschutz</a></p>
+    </footer>
+
     <script src="scripts/animations.js?v=20260204" defer></script>
-</body>
+    <script>
+      (function(){
+        if(!('querySelector' in document)) return;
+        function focusForm(){
+          var form = document.getElementById('contact-form');
+          if(!form) return;
+          form.scrollIntoView({behavior:'smooth',block:'center'});
+          var first = form.querySelector('input,textarea,button');
+          if(first) first.focus({preventScroll:true});
+        }
+        if(location.hash === '#contact-form'){
+          setTimeout(focusForm,80);
+        }
+      })();
+    </script>
+  </body>
 </html>

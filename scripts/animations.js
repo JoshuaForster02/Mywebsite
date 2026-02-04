@@ -1,4 +1,3 @@
-// Minimal animations.js
 (function(){
   'use strict';
   var storageKey = 'site-motion-disabled';
@@ -13,7 +12,7 @@
     btn.className = 'motion-toggle';
     btn.type = 'button';
     btn.setAttribute('aria-pressed','false');
-    btn.innerHTML = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18"><path d="M3 12h18" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg> <span class="label">Animationen</span>';
+    btn.textContent = 'Animationen';
     group.appendChild(btn);
     return btn;
   }
@@ -34,12 +33,9 @@
       });
     }
 
-    // entrance animation: add .animate-in to hero-inner and hero-aside unless reduced motion
     if(!prefersReduced && !document.body.classList.contains('no-animation')){
-      var hi = document.querySelector('.hero-inner');
-      var ha = document.querySelector('.hero-aside');
-      if(hi) hi.classList.add('animate-in');
-      if(ha) ha.classList.add('animate-in');
+      var hero = document.querySelector('.hero-grid');
+      if(hero) hero.classList.add('animate-in');
     }
   }
 
