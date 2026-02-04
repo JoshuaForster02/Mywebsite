@@ -30,9 +30,9 @@ const palette = {
 };
 
 const captions = {
-  cardio: "Abstrakte medizinische Visualisierung (3D).",
-  neuro: "Abstrakte medizinische Visualisierung (3D).",
-  informatics: "Abstrakte medizinische Visualisierung (3D).",
+  cardio: "Sportmedizin: Laufbahn, Puls‑Ring und Belastungs‑Layer.",
+  neuro: "Regeneration: neuronales Netz, Signalpfade und Fokus‑Knoten.",
+  informatics: "Prävention: Datenknoten, Trainings‑Pipeline und System‑Layer.",
 };
 
 function createGlowTexture() {
@@ -143,30 +143,73 @@ function createScanPlane(color) {
   return plane;
 }
 
+function createRunningTrack(color) {
+  const outer = new THREE.Shape();
+  const radius = 1.2;
+  outer.absellipse(0, 0, radius, radius * 0.65, 0, Math.PI * 2, false, 0);
+  const hole = new THREE.Path();
+  hole.absellipse(0, 0, radius * 0.75, radius * 0.45, 0, Math.PI * 2, true, 0);
+  outer.holes.push(hole);
+  const geometry = new THREE.ExtrudeGeometry(outer, { depth: 0.08, bevelEnabled: false });
+  const material = new THREE.MeshStandardMaterial({ color, roughness: 0.4, metalness: 0.2 });
+  const mesh = new THREE.Mesh(geometry, material);
+  mesh.rotation.x = Math.PI / 2.2;
+  mesh.position.y = -0.2;
+  return mesh;
+}
+
+function createPulseLine(color) {
+  const points = [
+    new THREE.Vector3(-1.4, 0.0, 0),
+    new THREE.Vector3(-0.9, 0.0, 0),
+    new THREE.Vector3(-0.6, 0.25, 0),
+    new THREE.Vector3(-0.4, -0.25, 0),
+    new THREE.Vector3(-0.2, 0.0, 0),
+    new THREE.Vector3(0.2, 0.0, 0),
+    new THREE.Vector3(0.45, 0.3, 0),
+    new THREE.Vector3(0.7, -0.2, 0),
+    new THREE.Vector3(1.2, 0.0, 0),
+  ];
+  const geometry = new THREE.BufferGeometry().setFromPoints(points);
+  const material = new THREE.LineBasicMaterial({ color, transparent: true, opacity: 0.75 });
+  const line = new THREE.Line(geometry, material);
+  line.position.y = 0.2;
+  return line;
+}
+
 function buildCardio() {
   const group = new THREE.Group();
-  group.userData = { pulse: 0, heart: null, ring: null, scan: null, glow: null };
+  group.userData = { pulse: 0, heart: null, ring: null, scan: null, glow: null, line: null };
+
+  const track = createRunningTrack(palette.cardio.ring);
+  group.add(track);
+
   const heartShape = createHeartShape();
-  const heartGeometry = new THREE.ExtrudeGeometry(heartShape, { depth: 0.4, bevelEnabled: true, bevelSize: 0.08, bevelThickness: 0.08 });
+  const heartGeometry = new THREE.ExtrudeGeometry(heartShape, { depth: 0.35, bevelEnabled: true, bevelSize: 0.07, bevelThickness: 0.07 });
   const heart = new THREE.Mesh(
     heartGeometry,
     new THREE.MeshStandardMaterial({ color: palette.cardio.core, emissive: palette.cardio.glow, roughness: 0.35, metalness: 0.3 })
   );
-  heart.scale.set(0.6, 0.6, 0.6);
+  heart.scale.set(0.55, 0.55, 0.55);
   heart.rotation.x = Math.PI * 0.1;
   group.userData.heart = heart;
   group.add(heart);
 
-  const arteryGeometry = new THREE.TubeGeometry(createArteryPath(), 80, 0.08, 10, false);
+  const arteryGeometry = new THREE.TubeGeometry(createArteryPath(), 80, 0.07, 10, false);
   const arteryMaterial = new THREE.MeshStandardMaterial({ color: palette.cardio.ring, emissive: 0x2b1b16, roughness: 0.4, metalness: 0.5 });
   const artery = new THREE.Mesh(arteryGeometry, arteryMaterial);
   group.add(artery);
 
-  const pulseRing = new THREE.TorusGeometry(1.6, 0.06, 16, 120);
+  const pulseRing = new THREE.TorusGeometry(1.4, 0.05, 16, 120);
   const ring = new THREE.Mesh(pulseRing, new THREE.MeshStandardMaterial({ color: palette.cardio.ring, roughness: 0.3, metalness: 0.4 }));
   ring.rotation.x = Math.PI / 2.6;
+  ring.position.y = 0.1;
   group.userData.ring = ring;
   group.add(ring);
+
+  const pulseLine = createPulseLine(0xffd6e0);
+  group.userData.line = pulseLine;
+  group.add(pulseLine);
 
   group.add(createDataGrid(0xffc6d6));
   const scan = createScanPlane(0xffd6e0);
@@ -203,7 +246,7 @@ function buildNeuro() {
   const core = new THREE.Mesh(coreGeometry, coreMaterial);
   group.add(core);
 
-  const halo = new THREE.TorusGeometry(1.4, 0.08, 18, 90);
+  const halo = new THREE.TorusGeometry(1.35, 0.08, 18, 90);
   const haloMesh = new THREE.Mesh(halo, new THREE.MeshStandardMaterial({ color: palette.neuro.ring, roughness: 0.35, metalness: 0.6 }));
   haloMesh.rotation.x = Math.PI / 2.1;
   group.add(haloMesh);
@@ -419,10 +462,13 @@ function animate(time) {
   if (sceneGroup.userData && sceneGroup.userData.heart) {
     sceneGroup.userData.pulse += delta * 3.2;
     const pulse = Math.sin(sceneGroup.userData.pulse) * 0.06 + 1;
-    sceneGroup.userData.heart.scale.set(0.6 * pulse, 0.6 * pulse, 0.6 * pulse);
+    sceneGroup.userData.heart.scale.set(0.55 * pulse, 0.55 * pulse, 0.55 * pulse);
     if (sceneGroup.userData.ring) {
       const ringPulse = Math.sin(sceneGroup.userData.pulse * 1.4) * 0.08 + 1;
       sceneGroup.userData.ring.scale.set(ringPulse, ringPulse, ringPulse);
+    }
+    if (sceneGroup.userData.line) {
+      sceneGroup.userData.line.material.opacity = 0.45 + Math.abs(Math.sin(sceneGroup.userData.pulse)) * 0.4;
     }
   }
 
