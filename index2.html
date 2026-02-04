@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Persönliche Website von Joshua Forster">
+    <title>Joshua Forster - Persönliche Website</title>
+    <style>
+        /* Allgemeines Styling */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #0078FF, #00C6FF);
+            color: #fff;
+            padding: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .header-left {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .header-center {
+            text-align: center;
+            font-size: 2rem;
+            flex: 1;
+            font-weight: 300;
+        }
+
+        /* Navigation */
+        nav {
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: -1.5rem 0 2rem;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        nav a {
+            color: #0078FF;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #0056b3;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            color: #0078FF;
+            margin-bottom: 1rem;
+        }
+
+        section p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        section a {
+            color: #0078FF;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        section a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 3rem;
+            padding: 1.5rem 0;
+            background: #f4f4f9;
+            border-top: 1px solid #ddd;
+        }
+
+        footer a {
+            color: #0078FF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-wrapper">
+            <div class="header-left">Joshua Forster</div>
+            <div class="header-center">Willkommen auf meiner persönlichen Website</div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">Über mich</a></li>
+            <li><a href="#projects">Projekte</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hauptinhalt -->
+    <main>
+        <section id="about">
+            <h2>Über mich</h2>
+            <p>Mein Name ist Joshua und ich bin Medizinstudent in Homburg.</p>
+        </section>
+        <section id="projects">
+            <h2>Projekte</h2>
+            <p>Projekt 1: <a href="https://medizin2.wordpress.com/" target="_blank">Medicus</a></p>
+        </section>
+        <section id="contact">
+            <h2>Kontakt</h2>
+            <p>Du kannst mich per <a href="mailto:joshuaforster02@gmail.com">E-Mail</a> erreichen.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        © 2024 Joshua Forster. Alle Rechte vorbehalten. | <a href="#">Impressum</a>
+    </footer>
+</body>
+</html>

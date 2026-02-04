@@ -1,96 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Über mich</title>
-    <style>
-        /* Allgemeines Styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.8;
-            background-color: #fff;
-            color: #333;
-        }
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="Über mich — Joshua Forster. Medizinstudent mit Fokus auf Kardiologie, Neurologie und klinische Datenanalyse.">
+    <title>Über mich — Joshua Forster</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:title" content="Über mich — Joshua Forster">
+    <meta property="og:description" content="Kurzprofil, Motivation und Interessen von Joshua Forster.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://joshuaforster.de/about.html">
+    <meta property="og:image" content="https://joshuaforster.de/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Über mich — Joshua Forster">
+    <meta name="twitter:description" content="Kurzprofil, Motivation und Interessen von Joshua Forster.">
+    <meta name="twitter:image" content="https://joshuaforster.de/og-image.png">
+    <link rel="canonical" href="https://joshuaforster.de/about.html">
+    <link rel="stylesheet" href="style.css?v=20260204">
+    </head>
+    <body>
+        <a class="skip-link" href="#main-content">Weiter zu Inhalt</a>
+        <header>
+            <div class="site-max header-wrapper">
+                <div class="brand"><a href="index.html">Joshua Forster</a></div>
+                <nav aria-label="Hauptnavigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html" aria-current="page">Über mich</a></li>
+                        <li><a href="projects.html">Projekte</a></li>
+                        <li><a href="research.html">Forschung</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-        /* Header */
-        header {
-            background: #000;
-            color: #fff;
-            padding: 1.5rem;
-            text-align: center;
-        }
+        <main class="site-max" id="main-content">
+            <section class="section">
+                <div class="section-head">
+                    <h1>Über mich</h1>
+                    <p class="section-lead">Ich bin Medizinstudent mit Fokus auf Kardiologie, Neurologie und klinische Datenanalyse. Mich motiviert es, medizinische Fragestellungen in klare Datenflüsse und nutzbare Prototypen zu übersetzen.</p>
+                </div>
+                <div class="ctas">
+                    <a class="btn btn-primary" href="contact.html#contact-form">CV anfragen</a>
+                    <a class="btn btn-ghost" href="projects.html">Projekte ansehen</a>
+                </div>
+            </section>
 
-        header h1 {
-            font-size: 2rem;
-            margin: 0;
-        }
+            <section class="section" aria-labelledby="background">
+                <div class="section-head">
+                    <h2 id="background">Werdegang & Stationen</h2>
+                    <p class="section-lead">Klinische Grundlagen, Diagnostik und datenbasierte Denkweise stehen im Zentrum.</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h5>Medizinstudium</h5>
+                        <p>Studium an der Universität mit Schwerpunkt auf klinischen Grundlagen und Diagnostik.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5>Forschung & Projekte</h5>
+                        <p>Interesse an kardiologischen & neurologischen Studien und datenbasierten Prototypen.</p>
+                    </div>
+                </div>
+            </section>
 
-        /* Navigation */
-        nav {
-            text-align: center;
-            margin: 1rem 0;
-        }
+            <section class="section">
+                <div class="section-head">
+                    <h2>Warum Medizin + Daten</h2>
+                    <p class="section-lead">Ich arbeite gern an der Schnittstelle aus klinischer Realität und nachvollziehbaren Datenwegen.</p>
+                </div>
+                <div class="focus-grid">
+                    <div class="focus-card">
+                        <h4>Relevanz</h4>
+                        <p>Prototypen sollen echte klinische Fragen messbar beantworten.</p>
+                    </div>
+                    <div class="focus-card">
+                        <h4>Transparenz</h4>
+                        <p>Methoden und Schritte bleiben klar dokumentiert und überprüfbar.</p>
+                    </div>
+                    <div class="focus-card">
+                        <h4>Umsetzbarkeit</h4>
+                        <p>Praxisnahe Tools statt theoretischer Konzepte ohne Einsatzbezug.</p>
+                    </div>
+                </div>
+            </section>
 
-        nav a {
-            color: #333;
-            text-decoration: none;
-            margin: 0 1rem;
-            font-size: 1rem;
-            font-weight: 500;
-        }
+        </main>
 
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Main Content */
-        main {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        main p {
-            font-size: 1.2rem;
-            color: #555;
-            text-align: center;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            font-size: 0.9rem;
-            color: #555;
-            margin-top: 2rem;
-            padding: 1rem 0;
-            border-top: 1px solid #ddd;
-        }
-    </style>
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <h1>Über mich</h1>
-    </header>
-
-    <!-- Navigation -->
-    <nav>
-        <a href="index.html">Startseite</a> |
-        <a href="projects.html">Projekte</a> |
-        <a href="contact.html">Kontakt</a>
-    </nav>
-
-    <!-- Hauptinhalt -->
-    <main>
-        <p>Hier findest du weitere Informationen über mich.</p>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 Meine Website. Alle Rechte vorbehalten.</p>
-    </footer>
-</body>
+        <footer class="site-max">
+            <p>&copy; 2026 Joshua Forster — <a href="mailto:joshuaforster02@gmail.com">joshuaforster02@gmail.com</a> — <a href="datenschutz.html">Datenschutz</a></p>
+        </footer>
+    <script src="scripts/animations.js?v=20260204" defer></script>
+    </body>
 </html>

@@ -1,129 +1,195 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dies ist meine erste Website">
-    <title>Meine erste Website</title>
-    <style>
-        /* Allgemeines Styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.8;
-            background-color: #fff;
-            color: #333;
-        }
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Joshua Forster — Medizinstudent mit Fokus auf klinische Datenanalyse, Kardiologie und Neurologie. Med-Tech Portfolio, Forschung & Kontakt.">
+        <meta name="author" content="Joshua Forster">
+        <meta property="og:title" content="Joshua Forster — Medizinstudent & Forscher">
+        <meta property="og:description" content="Projekte, Forschung und Kontakt von Joshua Forster. CV auf Anfrage.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://joshuaforster.de/index.html">
+        <meta property="og:image" content="https://joshuaforster.de/og-image.png">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Joshua Forster — Medizinstudent & Forscher">
+        <meta name="twitter:description" content="Med-Tech Portfolio, Forschung & Kontakt. CV auf Anfrage.">
+        <meta name="twitter:image" content="https://joshuaforster.de/og-image.png">
+    <title>Joshua Forster — Medizinstudent & Forscher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://joshuaforster.de/index.html">
+    <link rel="stylesheet" href="style.css?v=20260204">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Joshua Forster",
+      "url": "https://joshuaforster.de/index.html",
+      "jobTitle": "Medizinstudent",
+      "sameAs": [
+        "https://medizin2.wordpress.com/"
+      ]
+    }
+    </script>
+    </head>
+    <body>
+        <a class="skip-link" href="#main-content">Weiter zu Inhalt</a>
+        <header>
+            <div class="site-max header-wrapper">
+                <div class="brand"><a href="index.html" aria-current="page">Joshua Forster</a></div>
+                <nav aria-label="Hauptnavigation">
+                    <ul>
+                        <li><a href="about.html">Über mich</a></li>
+                        <li><a href="projects.html">Projekte</a></li>
+                        <li><a href="research.html">Forschung</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-        /* Header */
-        header {
-            background: #000;
-            color: #fff;
-            padding: 1.5rem 0;
-        }
+        <main class="site-max" id="main-content">
+            <section class="hero-grid">
+                <div class="hero-copy">
+                    <p class="hero-kicker">Med-Tech · Klinische Datenanalyse · Forschung</p>
+                    <h1>Ich übersetze klinische Fragen in klare Datenflüsse und nutzbare Prototypen.</h1>
+                    <p class="lead">Fokus auf Kardiologie, Neurologie und klinische Forschung. Ziel: Entscheidungen besser vorbereiten, Daten verständlicher machen und Workflows messbar verbessern.</p>
+                    <div class="badges" aria-hidden="true">
+                        <span class="badge">Kardiologie</span>
+                        <span class="badge">Neurologie</span>
+                        <span class="badge">Klinische Forschung</span>
+                        <span class="badge">Med. Informatik</span>
+                    </div>
+                    <div class="ctas">
+                        <a class="btn btn-primary" href="contact.html#contact-form">CV anfragen</a>
+                        <a class="btn btn-ghost" href="contact.html">Kontakt</a>
+                    </div>
+                    <div class="metrics">
+                        <div class="metric">
+                            <p class="metric-label">Fokus</p>
+                            <p class="metric-value">Klinik · Daten · Prototypen</p>
+                        </div>
+                        <div class="metric">
+                            <p class="metric-label">Tools</p>
+                            <p class="metric-value">Python · R · Datenanalyse</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-stage">
+                    <div class="stage-frame">
+                        <div class="stage-toolbar" role="tablist" aria-label="3D Themen">
+                            <button class="stage-tab is-active" data-scene="cardio" role="tab" aria-selected="true">Kardiologie</button>
+                            <button class="stage-tab" data-scene="neuro" role="tab" aria-selected="false">Neurologie</button>
+                            <button class="stage-tab" data-scene="informatics" role="tab" aria-selected="false">Informatik</button>
+                        </div>
+                        <canvas id="hero-3d" aria-label="3D Visualisierung" role="img"></canvas>
+                        <div class="stage-caption">
+                            <p id="stage-caption-text">3D‑Szene: Herz‑Arterie, Puls‑Ring und Datenfluss‑Layer.</p>
+                            <a class="btn btn-ghost" href="projects.html">In Arbeit ansehen</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        .header-wrapper {
-            display: flex;                /* Flexbox aktiviert */
-            justify-content: space-between; /* Elemente verteilen */
-            align-items: center;          /* Vertikale Zentrierung */
-            max-width: 1200px;            /* Optionale Begrenzung für Breite */
-            margin: 0 auto;               /* Zentriert den Header-Inhalt */
-            padding: 0 1rem;              /* Abstand innen */
-        }
+            <section class="section">
+                <div class="section-head">
+                    <h2>Positionierung</h2>
+                    <p class="section-lead">Medizinische Inhalte werden erst dann wertvoll, wenn sie in klare Abläufe, Messpunkte und Werkzeuge übersetzt sind.</p>
+                </div>
+                <div class="focus-grid">
+                    <div class="focus-card">
+                        <h4>Klinische Klarheit</h4>
+                        <p>Komplexe Informationen strukturiert in verständliche Entscheidungs‑Bausteine.</p>
+                    </div>
+                    <div class="focus-card">
+                        <h4>Datenfluss‑Denken</h4>
+                        <p>Von der Erhebung bis zur Visualisierung: nachvollziehbare, prüfbare Schritte.</p>
+                    </div>
+                    <div class="focus-card">
+                        <h4>Prototyp‑Mentalität</h4>
+                        <p>Pragmatisch testen, iterieren und klinische Relevanz früh validieren.</p>
+                    </div>
+                </div>
+            </section>
 
-        .header-left {
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
+            <section class="section" aria-labelledby="roadmap">
+                <div class="section-head">
+                    <h2 id="roadmap">Roadmap</h2>
+                    <p class="section-lead">Aktuelle Ideen und Prototypen — bewusst transparent als „in Arbeit“.</p>
+                </div>
+                <div class="roadmap-grid">
+                    <div class="roadmap-card">
+                        <div class="project-meta">
+                            <span class="status-pill status-inprogress"><span></span>In Arbeit</span>
+                        </div>
+                        <h4>Klinischer Workflow‑Prototyp</h4>
+                        <p>Strukturierung von Patientendaten und Visualisierung relevanter Kennzahlen.</p>
+                    </div>
+                    <div class="roadmap-card">
+                        <div class="project-meta">
+                            <span class="status-pill status-planned"><span></span>Geplant</span>
+                        </div>
+                        <h4>Datenanalyse‑Case</h4>
+                        <p>Konzept für Auswertung klinischer Fragestellungen mit nachvollziehbaren Reports.</p>
+                    </div>
+                    <div class="roadmap-card">
+                        <div class="project-meta">
+                            <span class="status-pill status-concept"><span></span>Konzept</span>
+                        </div>
+                        <h4>Forschungsprototyp</h4>
+                        <p>Ideen zu Datenaufbereitung, Visualisierung und methodischer Unterstützung.</p>
+                    </div>
+                </div>
+            </section>
 
-        .header-center {
-            text-align: center;           /* Text im mittleren Bereich zentrieren */
-            font-size: 1.5rem;
-            flex: 1;                      /* Füllt den freien Platz */
-        }
+            <section class="section" aria-labelledby="featured-projects">
+                <div class="section-head">
+                    <h2 id="featured-projects">Ausgewählte Referenz</h2>
+                    <p class="section-lead">Ein reales Projekt, das bereits öffentlich verfügbar ist.</p>
+                </div>
+                <div class="projects-grid">
+                    <article class="project">
+                        <div>
+                            <div class="project-meta">
+                                <span class="status-pill status-inprogress"><span></span>Live</span>
+                            </div>
+                            <h4>Medicus</h4>
+                            <p>Plattform zur medizinischen Informationsvermittlung für Studierende und Ärzt:innen.</p>
+                        </div>
+                        <div><a href="https://medizin2.wordpress.com/" target="_blank" rel="noopener">Zur Seite</a></div>
+                    </article>
+                    <article class="project">
+                        <div>
+                            <div class="project-meta">
+                                <span class="status-pill status-planned"><span></span>In Arbeit</span>
+                            </div>
+                            <h4>CV auf Anfrage</h4>
+                            <p>CV wird nach kurzer Bestätigung per E‑Mail zugesendet.</p>
+                        </div>
+                        <div><a href="contact.html">Kontakt</a></div>
+                    </article>
+                    <article class="project">
+                        <div>
+                            <div class="project-meta">
+                                <span class="status-pill status-concept"><span></span>Forschung</span>
+                            </div>
+                            <h4>Themenfelder</h4>
+                            <p>Kardiologie, Neurologie und klinische Informatik mit Fokus auf Diagnostik.</p>
+                        </div>
+                        <div><a href="research.html">Mehr</a></div>
+                    </article>
+                </div>
+            </section>
+        </main>
 
-        /* Navigation */
-        nav {
-            text-align: center;
-            margin: 1rem 0;
-        }
-        nav a {
-            color: #333;
-            text-decoration: none;
-            margin: 0 1rem;
-            font-size: 1rem;
-            font-weight: 500;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Main Content */
-        main {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        section {
-            margin-bottom: 2rem;
-        }
-        section h2 {
-            font-size: 1.5rem;
-            color: #000;
-            margin-bottom: 0.5rem;
-        }
-        section p {
-            font-size: 1rem;
-            color: #555;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            font-size: 0.9rem;
-            color: #555;
-            margin-top: 2rem;
-            padding: 1rem 0;
-            border-top: 1px solid #ddd;
-        }
-    </style>
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="header-wrapper">
-            <div class="header-left">Joshua Forster</div>
-            <div class="header-center">Willkommen auf meiner Website</div>
-        </div>
-    </header>
-
-    <!-- Navigation -->
-    <nav>
-        <a href="about.html">Über mich</a>
-        <a href="projects.html">Projekte</a>
-        <a href="contact.html">Kontakt</a>
-    </nav>
-
-    <!-- Hauptinhalt -->
-    <main>
-        <section id="about">
-            <h2>Über mich</h2>
-            <p>Mein Name ist Joshua und ich bin Medizinstudent in Deutschland</p>
-        </section>
-        <section id="projects">
-            <h2>Projekte</h2>
-            <p>Hier werde ich meine zukünftigen Projekte vorstellen.</p>
-        </section>
-        <section id="contact">
-            <h2>Kontakt</h2>
-            <p>Du kannst mich per <a href="mailto:joshuaforster02@gmail.com" style="color: #000; text-decoration: none;">E-Mail</a> erreichen.</p>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        © 2024 Meine Website. Alle Rechte vorbehalten.
-    </footer>
-</body>
+        <footer class="site-max">
+            <p>&copy; 2026 Joshua Forster — <a href="mailto:joshuaforster02@gmail.com">joshuaforster02@gmail.com</a> — <a href="datenschutz.html">Datenschutz</a></p>
+        </footer>
+        <script src="scripts/animations.js?v=20260204" defer></script>
+        <script type="module" src="scripts/hero-3d.js?v=20260204"></script>
+        </body>
 </html>

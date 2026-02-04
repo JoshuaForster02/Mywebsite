@@ -3,126 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt</title>
-    <style>
-        /* Allgemeines Styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.8;
-            background-color: #fff;
-            color: #333;
-        }
-
-        /* Header */
-        header {
-            background: #000;
-            color: #fff;
-            padding: 1.5rem;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2rem;
-            margin: 0;
-        }
-
-        /* Navigation */
-        nav {
-            text-align: center;
-            margin: 1rem 0;
-        }
-
-        nav a {
-            color: #333;
-            text-decoration: none;
-            margin: 0 1rem;
-            font-size: 1rem;
-            font-weight: 500;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Main Content */
-        main {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        input, textarea {
-            padding: 10px;
-            margin: 10px 0;
-            font-size: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        button {
-            background-color: #000;
-            color: #fff;
-            border: none;
-            padding: 10px;
-            font-size: 1rem;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #333;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            font-size: 0.9rem;
-            color: #555;
-            margin-top: 2rem;
-            padding: 1rem 0;
-            border-top: 1px solid #ddd;
-        }
-    </style>
+    <meta name="description" content="Kontakt zu Joshua Forster — Anfragen zu Projekten, Forschung oder CV.">
+    <title>Kontakt - Joshua Forster</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:title" content="Kontakt — Joshua Forster">
+    <meta property="og:description" content="Kontaktanfrage zu Projekten, Forschung oder CV.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://joshuaforster.de/contact.html">
+    <meta property="og:image" content="https://joshuaforster.de/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kontakt — Joshua Forster">
+    <meta name="twitter:description" content="Kontaktanfrage zu Projekten, Forschung oder CV.">
+    <meta name="twitter:image" content="https://joshuaforster.de/og-image.png">
+    <link rel="canonical" href="https://joshuaforster.de/contact.html">
+    <link rel="stylesheet" href="style.css?v=20260204">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <h1>Kontakt</h1>
-    </header>
+        <a class="skip-link" href="#main-content">Weiter zu Inhalt</a>
+        <header>
+            <div class="site-max header-wrapper">
+                <div class="brand"><a href="index.html">Joshua Forster</a></div>
+                <nav aria-label="Hauptnavigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Über mich</a></li>
+                        <li><a href="projects.html">Projekte</a></li>
+                        <li><a href="research.html">Forschung</a></li>
+                        <li><a href="contact.html" aria-current="page">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="index.html">Startseite</a> |
-        <a href="about.html">Über mich</a> |
-        <a href="projects.html">Projekte</a>
-    </nav>
+        <main class="site-max" id="main-content">
+            <section class="section">
+                <div class="section-head">
+                    <h1>Kontakt</h1>
+                    <p class="section-lead">Für Anfragen zu Projekten, Forschung oder Bewerbungen schreibe mir gern. Eine kurze Nachricht mit Kontext und Wunschzeitpunkt reicht.</p>
+                </div>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h4>Antwortzeit</h4>
+                        <p>In der Regel innerhalb von 48 Stunden.</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>CV‑Anfrage</h4>
+                        <p>Ich sende den CV nach kurzer Bestätigung per E‑Mail zu.</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>Kooperationen</h4>
+                        <p>Gern mit kurzer Zielbeschreibung und gewünschtem Zeitrahmen.</p>
+                    </div>
+                </div>
 
-    <!-- Hauptinhalt -->
-    <main>
-        <h2>Schreib mir eine Nachricht</h2>
-        <form action="send_mail.php" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+                        <!-- Formspree endpoint configured -->
+                        <form id="contact-form" action="https://formspree.io/f/xqeajnve" method="POST">
+                            <input type="hidden" name="_subject" value="Website-Anfrage von Eigene-Website">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" autocomplete="name" required>
 
-            <label for="email">E-Mail:</label>
-            <input type="email" id="email" name="email" required>
+                    <label for="email">E-Mail</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
 
-            <label for="message">Nachricht:</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
+                    <label for="subject">Betreff</label>
+                    <input type="text" id="subject" name="subject" autocomplete="off">
 
-            <button type="submit">Nachricht senden</button>
-        </form>
-    </main>
+                    <label for="message">Nachricht</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 Meine Website. Alle Rechte vorbehalten.</p>
-    </footer>
+                                <label style="display:flex;align-items:center;gap:0.5rem"><input type="checkbox" id="request_cv" name="request_cv" value="yes"> Ich möchte den CV per E-Mail erhalten</label>
+
+                                <button class="btn btn-primary" type="submit">Nachricht senden</button>
+                <p style="margin-top:0.6rem;color:var(--muted);font-size:0.9rem">Mit Absenden willige ich ein, dass meine Daten zur Bearbeitung dieser Anfrage gespeichert und verarbeitet werden. Weitere Informationen in <a href="datenschutz.html">Datenschutz</a>.</p>
+                </form>
+
+                <p style="margin-top:1rem;color:var(--muted)">Alternativ: <a href="mailto:joshuaforster02@gmail.com">joshuaforster02@gmail.com</a></p>
+            </section>
+        </main>
+
+        <footer class="site-max">
+            <p>&copy; 2026 Joshua Forster — <a href="mailto:joshuaforster02@gmail.com">joshuaforster02@gmail.com</a> — <a href="datenschutz.html">Datenschutz</a></p>
+        </footer>
+            <script>
+                // Smooth-scroll to form when coming from CV-on-request links
+                (function(){
+                    if(!('querySelector' in document)) return;
+                    function focusForm(){
+                        var form = document.getElementById('contact-form');
+                        if(!form) return;
+                        form.scrollIntoView({behavior:'smooth',block:'center'});
+                        var first = form.querySelector('input,textarea,button');
+                        if(first) first.focus({preventScroll:true});
+                    }
+                    if(location.hash === '#contact-form'){
+                        // small timeout to allow layout to settle
+                        setTimeout(focusForm,80);
+                    }
+                })();
+            </script>
+    <script src="scripts/animations.js?v=20260204" defer></script>
 </body>
 </html>
