@@ -118,6 +118,15 @@
     </footer>
 
     <script src="static/scripts/animations.js?v=20260204" defer></script>
-    <script type="module" src="static/scripts/hero-3d.js?v=20260204"></script>
-  </body>
+<script type="module">
+  const fallback = document.getElementById('stage-fallback');
+  import('./static/scripts/hero-3d.js?v=20260204')
+    .catch((err) => {
+      if (fallback) {
+        fallback.querySelector('p').textContent = '3D konnte nicht geladen werden.';
+      }
+      console.error('3D load failed', err);
+    });
+</script>
+      </body>
 </html>

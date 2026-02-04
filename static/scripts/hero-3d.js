@@ -1,3 +1,4 @@
+window.__3d_loaded = true;
 import * as THREE from "../vendor/three.module.js";
 
 const canvas = document.getElementById("hero-3d");
