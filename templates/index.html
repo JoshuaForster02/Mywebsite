@@ -73,7 +73,16 @@
               <button class="stage-tab" data-scene="neuro" role="tab" aria-selected="false">Doktorarbeit</button>
               <button class="stage-tab" data-scene="informatics" role="tab" aria-selected="false">Sportmedizin</button>
             </div>
-            <canvas id="hero-3d" aria-label="3D Visualisierung" role="img"></canvas>
+<div class="stage-fallback" id="stage-fallback" aria-hidden="true">
+              <div class="fallback-visual">
+                <svg viewBox="0 0 520 180" role="img" aria-label="Sportmedizinische Linie">
+                  <path d="M10 90 L120 90 L150 40 L180 140 L210 90 L280 90 L310 70 L340 110 L380 90 L510 90"
+                        fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p>Fallback: 3D wird geladen…</p>
+            </div>
+                        <canvas id="hero-3d" aria-label="3D Visualisierung" role="img"></canvas>
             <div class="stage-caption">
               <p id="stage-caption-text">Abstrakte medizinische Visualisierung (3D).</p>
               <a class="btn btn-ghost" href="about.html">Mehr erfahren</a>
