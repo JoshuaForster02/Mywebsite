@@ -244,3 +244,35 @@ form button{justify-self:start}
 
 
 .icon-circle svg path{stroke-width:2}
+
+
+.stat-item{position:relative;overflow:hidden}
+.stat-item::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:radial-gradient(180px 60px at 20% 50%, rgba(255,217,166,0.18), transparent 70%);
+    opacity:0.6;
+    animation:pulseGlow 4s ease-in-out infinite;
+    pointer-events:none;
+}
+@keyframes pulseGlow{0%,100%{opacity:0.4}50%{opacity:0.85}}
+
+
+
+.hero-ecg{
+    position:absolute;
+    left:16px;
+    bottom:16px;
+    width:160px;
+    height:60px;
+    opacity:0.6;
+    color:var(--accent);
+}
+.hero-ecg path{
+    stroke-dasharray:240;
+    stroke-dashoffset:240;
+    animation:ecgDraw 6s linear infinite;
+}
+@keyframes ecgDraw{0%{stroke-dashoffset:240}100%{stroke-dashoffset:0}}
+
