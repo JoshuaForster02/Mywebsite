@@ -30,9 +30,9 @@ const palette = {
 };
 
 const captions = {
-  cardio: "3D‑Szene: Herz‑Arterie, Puls‑Ring und Datenfluss‑Layer.",
-  neuro: "3D‑Szene: Neuronales Netz, synaptische Knoten und Signalpfade.",
-  informatics: "3D‑Szene: Datenknoten, Pipeline‑Ring und System‑Layer.",
+  cardio: "Abstrakte medizinische Visualisierung (3D).",
+  neuro: "Abstrakte medizinische Visualisierung (3D).",
+  informatics: "Abstrakte medizinische Visualisierung (3D).",
 };
 
 function createGlowTexture() {
