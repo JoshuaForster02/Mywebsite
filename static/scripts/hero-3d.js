@@ -9,12 +9,43 @@ const tabs = Array.from(document.querySelectorAll(".stage-tab"));
 const caption = document.getElementById("stage-caption-text");
 const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+function showFallback() {
+  const frame = canvas.parentElement;
+  if (!frame) return;
+  const fallback = document.createElement("div");
+  fallback.className = "stage-fallback";
+  fallback.innerHTML = `
+    <div class="fallback-visual" aria-hidden="true">
+      <svg viewBox="0 0 520 180" role="img" aria-label="Sportmedizinische Linie">
+        <path d="M10 90 L120 90 L150 40 L180 140 L210 90 L280 90 L310 70 L340 110 L380 90 L510 90"
+              fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <p>3D ist im aktuellen Browser nicht verfügbar. Visualisierung als EKG‑Linie angezeigt.</p>
+  `;
+  canvas.style.display = "none";
+  frame.insertBefore(fallback, frame.firstChild);
+}
+
+let gl = null;
+try {
+  gl = canvas.getContext("webgl2") || canvas.getContext("webgl");
+} catch (err) {
+  gl = null;
+}
+
+if (!gl) {
+  showFallback();
+  return;
+}
+
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
 camera.position.set(0, 0.2, 4.2);
 
 const renderer = new THREE.WebGLRenderer({
   canvas,
+  context: gl,
   antialias: true,
   alpha: true,
 });
